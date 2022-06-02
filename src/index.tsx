@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import { App } from './App';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
+import axios, { AxiosRequestConfig, AxiosRequestHeaders } from 'axios';
+
+
+// const httpInterceptor = () => {
+//   axios.interceptors.request.use(
+//     (req: AxiosRequestConfig) => {
+//       console.log('intercept');
+      
+//       return req;
+//     },
+//     (error) => {
+//       return Promise.reject(error);
+//     }
+//   );
+// };
+
+// httpInterceptor()
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
